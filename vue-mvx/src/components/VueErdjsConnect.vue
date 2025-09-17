@@ -61,16 +61,6 @@ const logout = () =>  {
     erd.logout()
     tabs.activeTab = '';
 }
-
-watch(() => account.address, (address) => {
-    if(address != null){
-        const searchParams = new URLSearchParams(window.location.search);
-        const fromUrl = searchParams.get('fromUrl');
-        if (fromUrl) {
-            window.location.href = fromUrl;
-        }
-    }
-});
 </script>
 
 <style lang="scss">

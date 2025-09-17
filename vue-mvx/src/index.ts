@@ -3,6 +3,7 @@ import {
     ProviderOption,
     ElrondEnvEnum,
     VueErdjsConnect,
+    VueErdjsConnectModal,
 } from "./VueErdJsPlugin";
 import {providersOptions} from "./providers/Providers";
 import type IQRCodeHandler from './components/xportal/IQRCodeHandler';
@@ -16,6 +17,7 @@ export {
     IQRCodeHandler,
     ProviderOption,
     VueErdjsConnect,
+    VueErdjsConnectModal,
     ElrondEnvEnum,
     providersOptions,
     initVueErdJsPlugin,

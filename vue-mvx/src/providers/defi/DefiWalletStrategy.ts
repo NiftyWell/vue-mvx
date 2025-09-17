@@ -63,6 +63,7 @@ class DefiWalletProviderStrategy implements IProviderStrategy {
                 return;
             }
             const token = signature ? {token: signature} : {};
+            console.log("THIS IS THE TOKEN", token);
             this._storage.set({wallet: address, ...token}, dayjs().add(this._timeoutInMinutes, 'minute'));
             this._eventHandler.handleLogin(this, new Address(address), signature);
         }).catch((error) => {

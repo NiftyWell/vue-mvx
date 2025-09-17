@@ -13,6 +13,7 @@
                     {{$erdAccount.address ? $erdAccount.obfuscatedAddress() : 'Authenticated' }}
                     <span v-if="$erdAccount.token" class="menu__items-token">Token : {{$erdAccount.token}}</span>
                 </router-link>
+                <VueErdjsConnectModal :qrcodeHandler="qrcodeHandler" :token="'hello'" />
             </div>
         </nav>
         <div class="main__content">
@@ -20,7 +21,14 @@
         </div>
     </div>
 </template>
+<script setup lang="ts">
+import {VueErdjsConnectModal} from "vue-mvx";
+import CustomQRCodeHandler from "./views/CustomQRCodeHandler";
 
+// Create instances of your props here
+const qrcodeHandler = new CustomQRCodeHandler();
+const token = 'hello';
+</script>
 <style lang="scss">
 @import "./sass/example";
 </style>
